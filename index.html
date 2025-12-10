@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boxing Rankings Dec 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial Black', Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d0000 100%);
+            color: #fff;
+            padding: 1%;
+            min-height: 100vh;
+        }
+        h1 {
+            font-size: 14px;
+            text-align: center;
+            color: #ffd700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1%;
+            text-shadow: 2px 2px 4px #000;
+        }
+        .tabs {
+            display: flex;
+            overflow-x: auto;
+            gap: 1%;
+            margin-bottom: 1%;
+            padding: 1%;
+            background: rgba(0,0,0,0.3);
+            border-radius: 8px;
+        }
+        .tab {
+            padding: 8px 12px;
+            background: #8b0000;
+            border: 2px solid #ffd700;
+            color: #ffd700;
+            cursor: pointer;
+            white-space: nowrap;
+            font-size: 11px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        .tab:hover {
+            background: #b30000;
+            transform: scale(1.05);
+        }
+        .tab.active {
+            background: #ffd700;
+            color: #000;
+            box-shadow: 0 0 10px #ffd700;
+        }
+        .division {
+            display: none;
+            background: rgba(0,0,0,0.6);
+            padding: 1%;
+            border-radius: 8px;
+            border: 2px solid #8b0000;
+        }
+        .division.active {
+            display: block;
+        }
+        .division-title {
+            font-size: 13px;
+            color: #ffd700;
+            margin-bottom: 1%;
+            text-transform: uppercase;
+            border-bottom: 2px solid #ffd700;
+            padding-bottom: 5px;
+        }
+        .fighter {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px;
+            margin-bottom: 5px;
+            background: linear-gradient(90deg, rgba(139,0,0,0.3) 0%, rgba(0,0,0,0.3) 100%);
+            border-left: 3px solid #ffd700;
+            border-radius: 4px;
+            font-size: 11px;
+        }
+        .fighter:hover {
+            background: linear-gradient(90deg, rgba(139,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%);
+            border-left-width: 5px;
+        }
+        .rank {
+            font-weight: bold;
+            color: #ffd700;
+            min-width: 30px;
+            font-size: 13px;
+        }
+        .name {
+            flex: 1;
+            font-weight: bold;
+            margin: 0 8px;
+        }
+        .record {
+            color: #aaa;
+            font-size: 10px;
+        }
+        .champion {
+            background: linear-gradient(90deg, rgba(255,215,0,0.2) 0%, rgba(139,0,0,0.3) 100%);
+            border-left-color: #ff0;
+            font-weight: bold;
+        }
+        .champion .name::before {
+            content: '👑 ';
+        }
+    </style>
+</head>
+<body>
+    <h1>🥊 World Boxing Rankings - December 2025 🥊</h1>
+    
+    <div class="tabs">
+        <div class="tab active" onclick="showDivision('heavyweight')">Heavyweight</div>
+        <div class="tab" onclick="showDivision('cruiser')">Cruiserweight</div>
+        <div class="tab" onclick="showDivision('lightheavy')">Light Heavy</div>
+        <div class="tab" onclick="showDivision('super')">Super Middle</div>
+        <div class="tab" onclick="showDivision('middle')">Middleweight</div>
+        <div class="tab" onclick="showDivision('welter')">Welterweight</div>
+        <div class="tab" onclick="showDivision('light')">Lightweight</div>
+        <div class="tab" onclick="showDivision('feather')">Featherweight</div>
+    </div>
+
+    <div id="heavyweight" class="division active">
+        <div class="division-title">Heavyweight (200+ lbs)</div>
+        <div class="fighter champion"><span class="rank">C</span><span class="name">Oleksandr Usyk</span><span class="record">22-0</span></div>
+        <div class="fighter"><span class="rank">1</span><span class="name">Tyson Fury</span><span class="record">34-1-1</span></div>
+        <div class="fighter"><span class="rank">2</span><span class="name">Daniel Dubois</span><span class="record">22-2</span></div>
+        <div class="fighter"><span class="rank">3</span><span class="name">Joseph Parker</span><span class="record">35-3</span></div>
+        <div class="fighter"><span class="rank">4</span><span class="name">Zhilei Zhang</span><span class="record">27-2-1</span></div>
+        <div class="fighter"><span class="rank">5</span><span class="name">Agit Kabayel</span><span class="record">25-0</span></div>
+        <div class="fighter"><span class="rank">6</span><span class="name">Filip Hrgovic</span><span class="record">17-1</span></div>
+        <div class="fighter"><span class="rank">7</span><span class="name">Martin Bakole</span><span class="record">21-1</span></div>
+        <div class="fighter"><span class="rank">8</span><span class="name">Fabio Wardley</span><span class="record">18-0-1</span></div>
+        <div class="fighter"><span class="rank">9</span><span class="name">Jared Anderson</span><span class="record">17-0</span></div>
+        <div class="fighter"><span class="rank">10</span><span class="name">Efe Ajagba</span><span class="record">20-1</span></div>
+        <div class="fighter"><span class="rank">11</span><span class="name">Demsey McKean</span><span class="record">24-1</span></div>
+        <div class="fighter"><span class="rank">12</span><span class="name">Frank Sanchez</span><span class="record">24-2</span></div>
+        <div class="fighter"><span class="rank">13</span><span class="name">Arslanbek Makhmudov</span><span class="record">18-2</span></div>
+        <div class="fighter"><span class="rank">14</span><span class="name">Justis Huni</span><span class="record">10-0</span></div>
+        <div class="fighter"><span class="rank">15</span><span class="name">Otto Wallin</span><span class="record">27-2</span></div>
+        <div class="fighter"><span class="rank">16</span><span class="name">Derek Chisora</span><span class="record">34-13</span></div>
+        <div class="fighter"><span class="rank">17</span><span class="name">Dillian Whyte</span><span class="record">30-3</span></div>
+        <div class="fighter"><span class="rank">18</span><span class="name">Michael Hunter</span><span class="record">24-2-2</span></div>
+        <div class="fighter"><span class="rank">19</span><span class="name">Guido Vianello</span><span class="record">13-1-1</span></div>
+        <div class="fighter"><span class="rank">20</span><span class="name">Joe Joyce</span><span class="record">16-2</span></div>
+        <div class="fighter"><span class="rank">21</span><span class="name">Junior Fa</span><span class="record">20-2</span></div>
+        <div class="fighter"><span class="rank">22</span><span class="name">Jarrell Miller</span><span class="record">26-1-1</span></div>
+        <div class="fighter"><span class="rank">23</span><span class="name">Tony Yoka</span><span class="record">12-1</span></div>
+        <div class="fighter"><span class="rank">24</span><span class="name">Michael Coffie</span><span class="record">14-2</span></div>
+        <div class="fighter"><span class="rank">25</span><span class="name">Johnny Fisher</span><span class="record">12-0</span></div>
+        <div class="fighter"><span class="rank">26</span><span class="name">Murat Gassiev</span><span class="record">31-2</span></div>
+        <div class="fighter"><span class="rank">27</span><span class="name">Carlos Takam</span><span class="record">42-7-1</span></div>
+        <div class="fighter"><span class="rank">28</span><span class="name">Iago Kiladze</span><span class="record">30-6-1</span></div>
+        <div class="fighter"><span class="rank">29</span><span class="name">Robert Helenius</span><span class="record">32-4</span></div>
+        <div class="fighter"><span class="rank">30</span><span class="name">David Adeleye</span><span class="record">12-0</span></div>
+        <div class="fighter"><span class="rank">31</span><span class="name">Frazer Clarke</span><span class="record">8-0-1</span></div>
+        <div class="fighter"><span class="rank">32</span><span class="name">Solomon Dacres</span><span class="record">8-0</span></div>
+        <div class="fighter"><span class="rank">33</span><span class="name">Zhan Kossobutskiy</span><span class="record">25-1</span></div>
+        <div class="fighter"><span class="rank">34</span><span class="name">Callum Johnson</span><span class="record">21-2</span></div>
+        <div class="fighter"><span class="rank">35</span><span class="name">Mohammed Rabii</span><span class="record">10-1</span></div>
+        <div class="fighter"><span class="rank">36</span><span class="name">Emir Ahmatovic</span><span class="record">14-1</span></div>
+        <div class="fighter"><span class="rank">37</span><span class="name">Solomon Wickey</span><span class="record">11-0</span></div>
+        <div class="fighter"><span class="rank">38</span><span class="name">Viddal Riley</span><span class="record">9-0</span></div>
+        <div class="fighter"><span class="rank">39</span><span class="name">Nick Webb</span><span class="record">20-3-1</span></div>
+        <div class="fighter"><span class="rank">40</span><span class="name">Jonathan Guidry</span><span class="record">21-2-2</span></div>
+        <div class="fighter"><span class="rank">41</span><span class="name">Evgeny Romanov</span><span class="record">18-1</span></div>
+        <div class="fighter"><span class="rank">42</span><span class="name">Kash Ali</span><span class="record">24-2</span></div>
+        <div class="fighter"><span class="rank">43</span><span class="name">Tyrone Spong</span><span class="record">17-1</span></div>
+        <div class="fighter"><span class="rank">44</span><span class="name">Senad Gashi</span><span class="record">20-3</span></div>
+        <div class="fighter"><span class="rank">45</span><span class="name">Oscar Rivas</span><span class="record">28-2</span></div>
+        <div class="fighter"><span class="rank">46</span><span class="name">Dave Allen</span><span class="record">23-6-2</span></div>
+        <div class="fighter"><span class="rank">47</span><span class="name">Petar Milas</span><span class="record">18-1</span></div>
+        <div class="fighter"><span class="rank">48</span><span class="name">Christian Hammer</span><span class="record">28-10</span></div>
+        <div class="fighter"><span class="rank">49</span><span class="name">Kevin Johnson</span><span class="record">37-20-1</span></div>
+        <div class="fighter"><span class="rank">50</span><span class="name">Drazan Janjanin</span><span class="record">25-2</span></div>
+    </div>
+
+    <div id="cruiser" class="division">
+        <div class="division-title">Cruiserweight (200 lbs)</div>
+        <div class="fighter champion"><span class="rank">C</span><span class="name">Jai Opetaia</span><span class="record">26-0</span></div>
+        <div class="fighter"><span class="rank">1</span><span class="name">Gilberto Ramirez</span><span class="record">46-1</span></div>
+        <div class="fighter"><span class="rank">2</span><span class="name">Noel Mikaelian</span><span class="record">27-2</span></div>
+        <div class="fighter"><span class="rank">3</span><span class="name">Chris Billam-Smith</span><span class="record">20-2</span></div>
+        <div class="fighter"><span class="rank">4</span><span class="name">Yuniel Dorticos</span><span class="record">27-3</span></div>
+        <div class="fighter"><span class="rank">5</span><span class="name">Richard Riakporhe</span><span class="record">17-0</span></div>
+        <div class="fighter"><span class="rank">6</span><span class="name">Aleksei Egorov</span><span class="record">12-0</span></div>
+        <div class="fighter"><span class="rank">7</span><span class="name">Kevin Lerena</span><span class="record">30-3</span></div>
+        <div class="fighter"><span class="rank">8</span><span class="name">Mairis Briedis</span><span class="record">28-3</span></div>
+        <div class="fighter"><span class="rank">9</span><span class="name">Badou Jack</span><span class="record">28-3-3</span></div>
+        <div class="fighter"><span class="rank">10</span><span class="name">Thabiso Mchunu</span><span class="record">24-7</span></div>
+        <div class="fighter"><span class="rank">11</span><span class="name">Ilunga Makabu</span><span class="record">29-3</span></div>
+        <div class="fighter"><span class="rank">12</span><span class="name">Jake Darnell</span><span class="record">18-0</span></div>
+        <div class="fighter"><span class="rank">13</span><span class="name">Huseyin Cinkara</span><span class="record">23-0</span></div>
+        <div class="fighter"><span class="rank">14</span><span class="name">Dylan Bregeon</span><span class="record">12-1-1</span></div>
+        <div class="fighter"><span class="rank">15</span><span class="name">Mikael Lawal</span><span class="record">19-1</span></div>
+        <div class="fighter"><span class="rank">16</span><span class="name">Ryad Merhy</span><span class="record">32-2</span></div>
+        <div class="fighter"><span class="rank">17</span><span class="name">Tommy McCarthy</span><span class="record">22-5</span></div>
+        <div class="fighter"><span class="rank">18</span><span class="name">Andrew Tabiti</span><span class="record">20-1</span></div>
+        <div class="fighter"><span class="rank">19</span><span class="name">Patrick Korte</span><span class="record">13-2</span></div>
+        <div class="fighter"><span class="rank">20</span><span class="name">Arsen Goulamirian</span><span class="record">27-0</span></div>
+        <div class="fighter"><span class="rank">21</span><span class="name">Emanuel Blandamura</span><span class="record">31-4</span></div>
+        <div class="fighter"><span class="rank">22</span><span class="name">Joel Tambwe Djeko</span><span class="record">19-1-1</span></div>
+        <div class="fighter"><span class="rank">23</span><span class="name">Isaac Chamberlain</span><span class="record">16-2-1</span></div>
+        <div class="fighter"><span class="rank">24</span><span class="name">Yamil Peralta</span><span class="record">17-1</span></div>
+        <div class="fighter"><span class="rank">25</span><span class="name">Fabio Turchi</span><span class="record">22-2</span></div>
+        <div class="fighter"><span class="rank">26</span><span class="name">Efetobor Apochi</span><span class="record">13-1</span></div>
+        <div class="fighter"><span class="rank">27</span><span class="name">Umar Sadiq</span><span class="record">15-2</span></div>
+        <div class="fighter"><span class="rank">28</span><span class="name">Aaron Russell</span><span class="record">11-0</span></div>
+        <div class="fighter"><span class="rank">29</span><span class="name">Jack Massey</span><span class="record">22-2</span></div>
+        <div class="fighter"><span class="rank">30</span><span class="name">Vaclav Pejsar</span><span class="record">17-2</span></div>
+        <div class="fighter"><span class="rank">31</span><span class="name">Olanrewaju Durodola</span><span class="record">39-8</span></div>
+        <div class="fighter"><span class="rank">32</span><span class="name">Aleksei Papin</span><span class="record">16-1</span></div>
+        <div class="fighter"><span class="rank">33</span><span class="name">Noel Gevor</span><span class="record">28-3</span></div>
+        <div class="fighter"><span class="rank">34</span><span class="name">Evgeny Tishchenko</span><span class="record">11-1</span></div>
+        <div class="fighter"><span class="rank">35</span><span class="name">Daniel Martz</span><span class="record">11-0-1</span></div>
+        <div class="fighter"><span class="rank">36</span><span class="name">Jordan Thompson</span><span class="record">15-0</span></div>
+        <div class="fighter"><span class="rank">37</span><span class="name">Nikodem Jezewski</span><span class="record">23-1-1</span></div>
+        <div class="fighter"><span class="rank">38</span><span class="name">Firat Arslan</span><span class="record">48-9-3</span></div>
+        <div class="fighter"><span class="rank">39</span><span class="name">Armend Xhoxhaj</span><span class="record">15-2</span></div>
+        <div class="fighter"><span class="rank">40</span><span class="name">Krzysztof Glowacki</span><span class="record">32-3</span></div>
+        <div class="fighter"><span class="rank">41</span><span class="name">Leon Harth</span><span class="record">22-4</span></div>
+        <div class="fighter"><span class="rank">42</span><span class="name">Luis Castillo</span><span class="record">25-7-1</span></div>
+        <div class="fighter"><span class="rank">43</span><span class="name">Otabek Kholmatov</span><span class="record">14-0</span></div>
+        <div class="fighter"><span class="rank">44</span><span class="name">Bilal Laggoune</span><span class="record">29-2</span></div>
+        <div class="fighter"><span class="rank">45</span><span class="name">Nikita Ababiy</span><span class="record">12-1</span></div>
+        <div class="fighter"><span class="rank">46</span><span class="name">Jonathan Rice</span><span class="record">16-7-1</span></div>
+        <div class="fighter"><span class="rank">47</span><span class="name">Luke Watkins</span><span class="record">17-0</span></div>
+        <div class="fighter"><span class="rank">48</span><span class="name">Tamas Lodi</span><span class="record">28-1</span></div>
+        <div class="fighter"><span class="rank">49</span><span class="name">Mark Flanagan</span><span class="record">28-3</span></div>
+        <div class="fighter"><span class="rank">50</span><span class="name">Victor Emilio Ramirez</span><span class="record">25-5-1</span></div>
+    </div>
+
+    <div id="lightheavy" class="division">
+        <div class="division-title">Light Heavyweight (175 lbs)</div>
+        <div class="fighter champion"><span class="rank">C</span><span class="name">Artur Beterbiev</span><span class="record">21-0</span></div>
+        <div class="fighter"><span class="rank">1</span><span class="name">Dmitry Bivol</span><span class="record">23-1</span></div>
+        <div class="fighter"><span class="rank">2</span><span class="name">Joshua Buatsi</span><span class="record">19-0</span></div>
+        <div class="fighter"><span class="rank">3</span><span class="name">David Benavidez</span><span class="record">29-0</span></div>
+        <div class="fighter"><span class="rank">4</span><span class="name">Callum Smith</span><span class="record">30-2</span></div>
+        <div class="fighter"><span class="rank">5</span><span class="name">Anthony Yarde</span><span class="record">25-3</span></div>
+        <div class="fighter"><span class="rank">6</span><span class="name">Craig Richards</span><span class="record">18-4-1</span></div>
+        <div class="fighter"><span class="rank">7</span><span class="name">Michael Eifert</span><span class="record">14-2</span></div>
+        <div class="fighter"><span class="rank">8</span><span class="name">Willy Hutchinson</span><span class="record">18-2</span></div>
+        <div class="fighter"><span class="rank">9</span><span class="name">Ben Whittaker</span><span class="record">8-0</span></div>
+        <div class="fighter"><span class="rank">10</span><span class="name">Malik Zinad</span><span class="record">12-0</span></div>
+        <div class="fighter"><span class="rank">11</span><span class="name">Dan Azeez</span><span class="record">20-1-1</span></div>
+        <div class="fighter"><span class="rank">12</span><span class="name">Pawel Stepien</span><span class="record">21-1</span></div>
+        <div class="fighter"><span class="rank">13</span><span class="name">Maxim Vlasov</span><span class="record">50-4</span></div>
+        <div class="fighter"><span class="rank">14</span><span class="name">Mathieu Bauderlique</span><span class="record">22-2</span></div>
+        <div class="fighter"><span class="rank">15</span><span class="name">Thomas Faure</span><span class="record">22-0</span></div>
+        <div class="fighter"><span class="rank">16</span><span class="name">Robin Sirwan Safar</span><span class="record">16-0</span></div>
+        <div class="fighter"><span class="rank">17</span><span class="name">Umar Salamov</span><span class="record">27-2</span></div>
+        <div class="fighter"><span class="rank">18</span><span class="name">Dominic Boesel</span><span class="record">34-3-1</span></div>
+        <div class="fighter"><span class="rank">19</span><span class="name">Serhii Bohachuk</span><span class="record">24-2</span></div>
+        <div class="fighter"><span class="rank">20</span><span class="name">Joe Smith Jr</span><span class="record">28-5</span></div>
+        <div class="fighter"><span class="rank">21</span><span class="name">Boris Crighton</span><span class="record">13-0</span></div>
+        <div class="fighter"><span class="rank">22</span><span class="name">Shakan Pitters</span><span class="record">17-2</span></div>
+        <div class="fighter"><span class="rank">23</span><span class="name">Troy Williamson</span><span class="record">21-1-1</span></div>
+        <div class="fighter"><span class="rank">24</span><span class="name">Lenin Castillo</span><span class="record">22-4-1</span></div>
+        <div class="fighter"><span class="rank">25</span><span class="name">Lyndon Arthur</span><span class="record">23-2</span></div>
+        <div class="fighter"><span class="rank">26</span><span class="name">Jeremias Ponce</span><span class="record">33-1</span></div>
+        <div class="fighter"><span class="rank">27</span><span class="name">Kody Davies</span><span class="record">14-0</span></div>
+        <div class="fighter"><span class="rank">28</span><span class="name">Mark Heffron</span><span class="record">31-3-1</span></div>
+        <div class="fighter"><span class="rank">29</span><span class="name">Igor Mikhalkin</span><span class="record">26-3</span></div>
+        <div class="fighter"><span class="rank">30</span><span class="name">John Ryder</span><span class="record">32-7</span></div>
+        <div class="fighter"><span class="rank">31</span><span class="name">Emmanuel Danso</span><span class="record">15-0</span></div>
+        <div class="fighter"><span class="rank">32</span><span class="name">Hosea Burton</span><span class="record">30-4</span></div>
+        <div class="fighter"><span class="rank">33</span><span class="name">Yuri Foreman</span><span class="record">37-3</span></div>
+        <div class="fighter"><span class="rank">34</span><span class="name">Soltane Mizov</span><span class="record">12-0</span></div>
+        <div class="fighter"><span class="rank">35</span><span class="name">Ezequiel Maderna</span><span class="record">28-8</span></div>
+        <div class="fighter"><span class="rank">36</span><span class="name">Mitch Williams</span><span class="record">21-2-1</span></div>
+        <div class="fighter"><span class="rank">37</span><span class="name">Bektemir Melikuziev</span><span class="record">14-1</span></div>
+        <div class="fighter"><span class="rank">38</span><span class="name">Ahmed Elbiali</span><span class="record">12-1</span></div>
+        <div class="fighter"><span class="rank">39</span><span class="name">Osleys Iglesias</span><span class="record">13-0</span></div>
+        <div class="fighter"><span class="rank">40</span><span class="name">Moses Itauma</span><span class="record">11-0</span></div>
+        <div class="fighter"><span class="rank">41</span><span class="name">Isaac Chilemba</span><span class="record">26-7-2</span></div>
+        <div class="fighter"><span class="rank">42</span><span class="name">Fanlong Meng</span><span class="record">20-0</span></div>
+        <div class="fighter"><span class="rank">43</span><span class="name">Sergey Kovalev</span><span class="record">34-5-1</span></div>
+        <div class="fighter"><span class="rank">44</span><span class="name">Lenin Castillo</span><span class="record">22-3-1</span></div>
+        <div class="fighter"><span class="rank">45</span><span class="name">Shabaz Masoud</span><span class="record">13-0</span></div>
+        <div class="fighter"><span class="rank">46</span><span class="name">Kareem Hackett</span><span class="record">8-0</span></div>
+        <div class="fighter"><span class="rank">47</span><span class="name">Jozef Jurko</span><span class="record">15-1</span></div>
+        <div class="fighter"><span class="rank">48</span><span class="name">Dillon Wilder</span><span class="record">12-0</span></div>
+        <div class="fighter"><span class="rank">49</span><span class="name">Jorge Fortea</span><span class="record">23-1-1</span></div>
+        <div class="fighter"><span class="rank">50</span><span class="name">Gennadiy Martirosyan</span><span class="record">14-1</span></div>
+    </div>
+
+    <div id="super" class="division">
+        <div class="division-title">Super Middleweight (168 lbs)</div>
+        <div class="fighter champion"><span class="rank">C</span><span class="name">Canelo Alvarez</span><span class="record">62-2-2</span></div>
+        <div class="fighter"><span class="rank">1</span><span class="name">Christian Mbilli</span><span class="record">28-0</span></div>
+        <div class="fighter"><span class="rank">2</span><span class="name">Demetrius Andrade</span><span class="record">33-1</span></div>
+        <div class="fighter"><span class="rank">3</span><span class="name">Jaime Munguia</span><span class="record">44-1</span></div>
+        <div class="fighter"><span class="rank">4</span><span class="name">Diego Pacheco</span><span class="record">22-0</span></div>
+        <div class="fighter"><span class="rank">5</span><span class="name">Edgar Berlanga</span><span class="record">22-1</span></div>
+        <div class="fighter"><span class="rank">6</span><span class="name">Carlos Adames</span><span class="record">24-1</span></div>
+        <div class="fighter"><span class="rank">7</span><span class="name">William Scull</span><span class="record">23-0</span></div>
+        <div class="fighter"><span class="rank">8</span><span class="name">Caleb Plant</span><span class="record">23-2</span></div>
+        <div class="fighter"><span class="rank">9</span><span class="name">Erik Bazinyan</span><span class="record">32-0-1</span></div>
+        <div class="fighter"><span class="rank">10</span><span class="name">Lerrone Richards</span><span class="record">17-1</span></div>
+        <div class="fighter"><span class="rank">11</span><span class="name">Zhanibek Alimkhanuly</span><span class="record">16-0</span></div>
+        <div class="fighter"><span class="rank">12</span><span class="name">Vincenzo Gualtieri</span><span class="record">11-0</span></div>
+        <div class="fighter"><span class="rank">13</span><span class="name">Fedor Chudinov</span><span class="record">27-3</span></div>
+        <div class="fighter"><span class="rank">14</span><span class="name">Rocky Fielding</span><span class="record">33-3</span></div>
+        <div class="fighter"><span class="rank">15</span><span class="name">Zach Parker</span><span class="record">24-1</span></div>
+        <div class="fighter"><span class="rank">16</span><span class="name">Cesar Nunez</span><span class="record">27-1</span></div>
+        <div class="fighter"><span class="rank">17</span><span class="name">Carlos Gongora</span><span class="record">22-2</span></div>
+        <div class="fighter"><span class="rank">18</span><span class="name">David Lemieux</span><span class="record">43-5</span></div>
+        <div class="fighter"><span class="rank">19</span><span class="name">Zhanibek Zhakiyanov</span><span class="record">35-2</span></div>
+        <div class="fighter"><span class="rank">20</span><span class="name">Nathan Heaney</span><span class="record">18-0</span></div>
+        <div class="fighter"><span class="rank">21</span><span class="name">Chris Eubank Jr</span><span class="record">34-3</span></div>
+        <div class="fighter"><span class="rank">22</span><span class="name">Shane Mosley Jr</span><span class="record">21-4</span></div>
+        <div class="fighter"><span class="rank">23</span><span class="name">Bektemir Melikuziev</span><span class="record">14-1</span></div>
+        <div class="fighter"><span class="rank">24</span><span class="name">Ronald Ellis</span><span class="record">20-2-2</span></div>
+        <div class="fighter"><span class="rank">25</span><span class="name">Tyler Howard</span><span class="record">21-1</span></div>
+        <div class="fighter"><span class="rank">26</span><span class="name">Marcos Hernandez</span><span class="record">17-0</span></div>
+        <div class="fighter"><span class="rank">27</span><span class="name">Brad Solomon</span><span class="record">30-4</span></div>
+        <div class="fighter"><span class="rank">28</span><span class="name">John Docherty</span><span class="record">14-1</span></div>
+        <div class="fighter"><span class="rank">29</span><span class="name">Felix Cash</span><span class="record">17-0</span></div>
+        <div class="fighter"><span class="rank">30</span><span class="name">Darryl Jones</span><span class="record">14-0-1</span></div>
+        <div class="fighter"><span class="rank">31</span><span class="name">Caoimhin Agyarko</span><span class="record">15-0</span></div>
+        <div class="fighter"><span class="rank">32</span><span class="name">Grant Dennis</span><span class="record">11-1-1</span></div>
+        <div class="fighter"><span class="rank">33</span><span class="name">Nico Hernandez</span><span class="record">9-0</span></div>
+        <div class="fighter"><span class="rank">34</span><span class="name">Ronald Gavril</span><span class="record">28-5</span></div>
+        <div class="fighter"><span class="rank">35</span><span class="name">Alexis Salazar</span><span class="record">25-5</span></div>
+        <div class="fighter"><span class="rank">36</span><span class="name">Marcelo Coceres</span><span class="record">33-4-1</span></div>
+        <div class="fighter"><span class="rank">37</span><span class="name">Aaron McKenna</span><span class="record">17-0</span></div>
+        <div class="fighter"><span class="rank">38</span><span class="name">Patrice Volny</span><span class="record">19-1</span></div>
+        <div class="fighter"><span class="rank">39</span><span class="name">Jack Cullen</span><span class="record">22-4-1</span></div>
+        <div class="fighter"><span class="rank">40</span><span class="name">Denzel Bentley</span><span class="record">20-3-1</span></div>
+        <div class="fighter"><span class="rank">41</span><span class="name">James Metcalf</span><span class="record">26-3</span></div>
+        <div class="fighter"><span class="rank">42</span><span class="name">Paul Kroll</span><span class="record">12-0</span></div>
+        <div class="fighter"><span class="rank">43</span><span class="name">Liam Cameron</span><span class="record">23-6</span></div>
+        <div class="fighter"><span class="rank">44</span><span class="name">Carlos Galvan</span><span class="record">21-2-1</span></div>
+        <div class="fighter"><span class="rank">45</span><span class="name">Donovan Dennis</span><span class="record">12-0</span></div>
+        <div class="fighter"><span class="rank">46</span><span class="name">Cesar Nunez</span><span class="record">27-2</span></div>
+        <div class="fighter"><span class="rank">47</span><span class="name">Khalil El Harraz</span><span class="record">18-0</span></div>
+        <div class="fighter"><span class="rank">48</span><span class="name">Gabe Rosado</span><span class="record">27-17-1</span></div>
+        <div class="fighter"><span class="rank">49</span><span class="name">Carlos Adames</span><span class="record">23-1</span></div>
+        <div class="fighter"><span class="rank">50</span><span class="name">Lerrone Richards</span><span class="record">17-1</span></div>
+    </div>
+
+    <div id="middle" class="division">
+        <div class="division-title">Middleweight (160 lbs)</div>
+        <div class="fighter champion"><span class="rank">C</span><span class="name">Janibek Alimkhanuly</span><span class="record">16-0</span></div>
+        <div class="fighter"><span class="rank">1</span><span class="name">Hamzah Sheeraz</span><span class="record">21-0</span></div>
+        <div class="fighter"><span class="rank">2</span><span class="name">Erislandy Lara</span><span class="record">31-3-3</span></div>
+        <div class="fighter"><span class="rank">3</span><span class="name">Jermall Charlo</span><span class="record">33-0</span></div>
+        <div class="fighter"><span class="rank">4</span><span class="name">Israil Madrimov</span><span class="record">10-1-1</span></div>
+        <div class="fighter"><span class="rank">5</span><span class="name">Sergiy Derevyanchenko</span><span class="record">15-5</span></div>
+        <div class="fighter"><span class="rank">6</span><span class="name">Meiirim Nursultanov</span><span class="record">20-0</span></div>
+        <div class="fighter"><span class="rank">7</span><span class="name">Liam Williams</span><span class="record">24-4-1</span></div>
+        <div class="fighter"><span class="rank">8</span><span class="name">Tyler Howard</span><span class="record">21-1</span></div>
+        <div class="fighter"><span class="rank">9</span><span class="name">Austin Williams</span><span class="record">17-0</span></div>
+        <div class="fighter"><span class="rank">10</span><span class="name">Troy Isley</span><span class="record">14-0</span></div>
+        <div class="fighter"><span class="rank">11</span><span class="name">Michael Zerafa</span><span class="record">31-4</span></div>
+        <div class="fighter"><span class="rank">12</span><span class="name">Esquiva Falcao</span><span class="record">30-1</span></div>
+        <div class="fighter"><span class="rank">13</span><span class="name">Maciej Sulecki</span><span class="record">32-2</span></div>
+        <div class="fighter"><span class="rank">14</span><span class="name">Ryota Murata</span><span class="record">17-3</span></div>
+        <div class="fighter"><span class="rank">15</span><span class="name">Josh Kelly</span><span class="record">15-2-1</span></div>
+        <div class="fighter"><span class="rank">16</span><span class="name">Kieron Conway</span><span class="record">20-3-1</span></div>
+        <div class="fighter"><span class="rank">17</span><span class="name">Nathan Decastro</span><span class="record">14-1</span></div>
+        <div class="fighter"><span class="rank">18</span><span class="name">Ben Whittaker</span><span class="record">8-0</span></div>
+        <div class="fighter"><span class="rank">19</span><span class="name">Sladan Janjanin</span><span class="record">22-3</span></div>
+        <div class="fighter"><span class="rank">20</span><span class="name">Vaughn Alexander</span><span class="record">17-7</span></div>
+        <div class="fighter"><span class="rank">21</span><span class="name">Aidos Yerbossynuly</span><span class="record">18-0</span></div>
+        <div class="fighter"><span class="rank">22</span><span class="name">Tureano Johnson</span><span class="record">23-3-1</span></div>
+        <div class="fighter"><span class="rank">23</span><span class="name">Vito Mielnicki Jr</span><span class="record">19-1</span></div>
+        <div class="fighter"><span class="rank">24</span><span class="name">Matt Korobov</span><span class="record">31-3-1</span></div>
+        <div class="fighter"><span class="rank">25</span><span class="name">Evgeny Chuprakov</span><span class="record">23-0</span></div>
+        <div class="fighter"><span class="rank">26</span><span class="name">Dmitry Chudinov</span><span class="record">25-4-2</span></div>
+        <div class="fighter"><span class="rank">27</span><span class="name">Madiyar Ashkeyev</span><span class="record">17-0</span></div>
+        <div class="fighter"><span class="rank">28</span><span class="name">Mark Heffron</span><span class="record">31-3-1</span></div>
+        <div class="fighter"><span class="rank">29</span><span class="name">Joe Sheedy</span><span class="record">18-0</span></div>
+        <div class="fighter"><span class="rank">30</span><span class="name">Luke Keeler</span><span class="record">20-4-1</span></div>
+        <div class="fighter"><span class="rank">31</span><span class="name">Vincenzo Gualtieri</span><span class="record">11-0</span></div>
+        <div class="fighter"><span class="rank">32</span><span class="name">Tursynbay Kulakhmet</span><span class="record">10-0</span></div>
+        <div class="fighter"><span class="rank">33</span><span class="name">Souleymane Cissokho</span><span class="record">16-0</span></div>
+        <div class="fighter"><span class="rank">34</span><span class="name">Issa Akberbayev</span><span class="record">24-0</span></div>
+        <div class="fighter"><span class="rank">35</span><span class="name">Spike O'Sullivan</span><span class="record">32-5</span></div>
+        <div class="fighter"><span class="rank">36</span><span class="name">Dzmitry Atrokhau</span><span class="record">10-0</span></div>
+        <div class="fighter"><span class="rank">37</span><span class="name">Felix Cash</span><span class="record">17-0</span></div>
+        <div class="fighter"><span class="rank">38</span><span class="name">Tyler Denny</span><span class="record">19-2-3</span></div>
+        <div class="fighter"><span class="rank">39</span><span class="name">Jaime Munguia</span><span class="record">44-1</span></div>
+        <div class="fighter"><span class="rank">40</span><span class="name">Rob Brant</span><span class="record">28-3</span></div>
+        <div class="fighter"><span class="rank">41</span><span class="name">Emmanuell Reyes</span><span class="record">6-0</span></div>
+        <div class="fighter"><span class="rank">42</span><span class="name">Cesar Nunez</span><span class="record">27-2</span></div>
+        <div class="fighter"><span class="rank">43</span><span class="name">Nico Hernandez</span><span class="record">9-0</span></div>
+        <div class="fighter"><span class="rank">44</span><span class="name">Joshua Conley</span><span class="record">19-4-1</span></div>
+        <div class="fighter"><span class="rank">45</span><span class="name">Nikita Ababiy</span><span class="record">12-1</span></div>
+        <div class="fighter"><span class="rank">46</span><span class="name">Quinn Keon</span><span class="record">8-0</span></div>
+        <div class="fighter"><span class="rank">47</span><span class="name">Grant Dennis</span><span class="record">11-1-1</span></div>
+        <div class="fighter"><span class="rank">48</span><span class="name">Evan Holyfield</span><span class="record">11-0</span></div>
+        <div class="fighter"><span class="rank">49</span><span class="name">Austin DeAnda</span><span class="record">16-0</span></div>
+        <div class="fighter"><span class="rank">50</span><span class="name">Kieran Smith</span><span class="record">17-0-1</span></div>
+    </div>
+
+    <div id="welter" class="division">
+        <div class="division-title">Welterweight (147 lbs)</div>
+        <div class="fighter champion"><span class="rank">C</span><span class="name">Terence Crawford</span><span class="record">41-0</span></div>
+        <div class="fighter"><span class="rank">1</span><span class="name">Jaron Ennis</span><span class="record">33-0</span></div>
+        <div class="fighter"><span class="rank">2</span><span class="name">Vergil Ortiz Jr</span><span class="record">22-0</span></div>
+        <div class="fighter"><span class="rank">3</span><span class="name">Eimantas Stanionis</span><span class="record">15-0</span></div>
+        <div class="fighter"><span class="rank">4</span><span class="name">Karen Chukhadzhian</span><span class="record">24-2</span></div>
+        <div class="fighter"><span class="rank">5</span><span class="name">Shawn Porter</span><span class="record">31-4-1</span></div>
+        <div class="fighter"><span class="rank">6</span><span class="name">Cody Crowley</span><span class="record">22-0</span></div>
+        <div class="fighter"><span class="rank">7</span><span class="name">Conor Benn</span><span class="record">23-0</span></div>
+        <div class="fighter"><span class="rank">8</span><span class="name">Giovani Santillan</span><span class="record">31-1</span></div>
+        <div class="fighter"><span class="rank">9</span><span class="name">Rashidi Ellis</span><span class="record">26-0</span></div>
+        <div class="fighter"><span class="rank">10</span><span class="name">Blair Cobbs</span><span class="record">17-1-1</span></div>
+        <div class="fighter"><span class="rank">11</span><span class="name">Josh Taylor</span><span class="record">20-2</span></div>
+        <div class="fighter"><span class="rank">12</span><span class="name">Yordenis Ugas</span><span class="record">27-5</span></div>
+        <div class="fighter"><span class="rank">13</span><span class="name">Danny Garcia</span><span class="record">37-3</span></div>
+        <div class="fighter"><span class="rank">14</span><span class="name">Keith Thurman</span><span class="record">30-1</span></div>
+        <div class="fighter"><span class="rank">15</span><span class="name">Alexis Rocha</span><span class="record">25-2</span></div>
+        <div class="fighter"><span class="rank">16</span><span class="name">Shakhram Giyasov</span><span class="record">14-1</span></div>
+        <div class="fighter"><span class="rank">17</span><span class="name">Custio Clayton</span><span class="record">20-0-1</span></div>
+        <div class="fighter"><span class="rank">18</span><span class="name">Michael McKinson</span><span class="record">27-2</span></div>
+        <div class="fighter"><span class="rank">19</span><span class="name">Larry Gomez</span><span class="record">16-0</span></div>
+        <div class="fighter"><span class="rank">20</span><span class="name">David Avanesyan</span><span class="record">31-5-1</span></div>
+        <div class="fighter"><span class="rank">21</span><span class="name">Charles Conwell</span><span class="record">20-0</span></div>
+        <div class="fighter"><span class="rank">22</span><span class="name">Jaron Ennis</span><span class="record">33-0</span></div>
+        <div class="fighter"><span class="rank">23</span><span class="name">Souleymane Cissokho</span><span class="record">16-0</span></div>
+        <div class="fighter"><span class="rank">24</span><span class="name">Jamal James</span><span class="record">28-2</span></div>
+        <div class="fighter"><span class="rank">25</span><span class="name">Thulani Mbenge</span><span class="record">19-1</span></div>
+        <div class="fighter"><span class="rank">26</span><span class="name">Alex Besputin</span><span class="record">17-1</span></div>
+        <div class="fighter"><span class="rank">27</span><span class="name">Gabriel Maestre</span><span class="record">7-1</span></div>
+        <div class="fighter"><span class="rank">28</span><span class="name">Mykal Fox</span><span class="record">26-5</span></div>
+        <div class="fighter"><span class="rank">29</span><span class="name">Radzhab Butaev</span><span class="record">14-1</span></div>
+        <div class="fighter"><span class="rank">30</span><span class="name">Ed Brown</span><span class="record">32-3</span></div>
+        <div class="fighter"><span class="rank">31</span><span class="name">Kudratillo Abdukakhorov</span><span class="record">20-1</span></div>
+        <div class="fighter"><span class="rank">32</span><span class="name">Ekow Essuman</span><span class="record">21-0</span></div>
+        <div class="fighter"><span class="rank">33</span><span class="name">Chris Kongo</span><span class="record">15-2</span></div>
+        <div class="fighter"><span class="rank">34</span><span class="name">Fredrick Lawson</span><span class="record">31-3</span></div>
+        <div class="fighter"><span class="rank">35</span><span class="name">Sergey Lipinets</span><span class="record">18-3-1</span></div>
+        <div class="fighter"><span class="rank">36</span><span class="name">Egidijus Kavaliauskas</span><span class="record">23-2-1</span></div>
+        <div class="fighter"><span class="rank">37</span><span class="name">Mathieu Germain</span><span class="record">15-0</span></div>
+        <div class="fighter"><span class="rank">38</span><span class="name">Alberto Puello</span><span class="record">23-0</span></div>
+        <div class="fighter"><span class="rank">39</span><span class="name">Montana Love</span><span class="record">20-1-1</span></div>
+        <div class="fighter"><span class="rank">40</span><span class="name">Josesito Lopez</span><span class="record">39-9</span></div>
+        <div class="fighter"><span class="rank">41</span><span class="name">Francisco Emanuel Torres</span><span class="record">21-4-1</span></div>
+        <div class="fighter"><span class="rank">42</span><span class="name">Luis Alberto Lopez</span><span class="record">31-2</span></div>
+        <div class="fighter"><span class="rank">43</span><span class="name">Mikey Garcia</span><span class="record">40-2</span></div>
+        <div class="fighter"><span class="rank">44</span><span class="name">Keita Obara</span><span class="record">35-5-1</span></div>
+        <div class="fighter"><span class="rank">45</span><span class="name">Chris van Heerden</span><span class="record">28-3-1</span></div>
+        <div class="fighter"><span class="rank">46</span><span class="name">Samuel Vargas</span><span class="record">33-8-2</span></div>
+        <div class="fighter"><span class="rank">47</span><span class="name">Liam Paro</span><span class="record">25-0</span></div>
+        <div class="fighter"><span class="rank">48</span><span class="name">Jack Catterall</span><span class="record">29-1</span></div>
+        <div class="fighter"><span class="rank">49</span><span class="name">Ohara Davies</span><span class="record">25-3</span></div>
+        <div class="fighter"><span class="rank">50</span><span class="name">Jose Zepeda</span><span class="record">37-5</span></div>
+    </div>
+
+    <div id="light" class="division">
+        <div class="division-title">Lightweight (135 lbs)</div>
+        <div class="fighter champion"><span class="rank">C</span><span class="name">Gervonta Davis</span><span class="record">30-0</span></div>
+        <div class="fighter"><span class="rank">1</span><span class="name">Vasiliy Lomachenko</span><span class="record">18-3</span></div>
+        <div class="fighter"><span class="rank">2</span><span class="name">Shakur Stevenson</span><span class="record">22-0</span></div>
+        <div class="fighter"><span class="rank">3</span><span class="name">William Zepeda</span><span class="record">32-0</span></div>
+        <div class="fighter"><span class="rank">4</span><span class="name">Devin Haney</span><span class="record">31-0</span></div>
+        <div class="fighter"><span class="rank">5</span><span class="name">Raymond Muratalla</span><span class="record">21-0</span></div>
+        <div class="fighter"><span class="rank">6</span><span class="name">Isaac Cruz</span><span class="record">26-3-1</span></div>
+        <div class="fighter"><span class="rank">7</span><span class="name">Abdullah Mason</span><span class="record">15-0</span></div>
+        <div class="fighter"><span class="rank">8</span><span class="name">Frank Martin</span><span class="record">19-1</span></div>
+        <div class="fighter"><span class="rank">9</span><span class="name">Keyshawn Davis</span><span class="record">12-0</span></div>
+        <div class="fighter"><span class="rank">10</span><span class="name">Andy Cruz</span><span class="record">4-0</span></div>
+        <div class="fighter"><span class="rank">11</span><span class="name">Denys Berinchyk</span><span class="record">19-0</span></div>
+        <div class="fighter"><span class="rank">12</span><span class="name">Edwin De Los Santos</span><span class="record">16-2</span></div>
+        <div class="fighter"><span class="rank">13</span><span class="name">Rolando Romero</span><span class="record">15-2</span></div>
+        <div class="fighter"><span class="rank">14</span><span class="name">George Kambosos Jr</span><span class="record">21-3</span></div>
+        <div class="fighter"><span class="rank">15</span><span class="name">Jamaine Ortiz</span><span class="record">17-3-1</span></div>
+        <div class="fighter"><span class="rank">16</span><span class="name">Michel Rivera</span><span class="record">26-1</span></div>
+        <div class="fighter"><span class="rank">17</span><span class="name">Teofimo Lopez</span><span class="record">21-1</span></div>
+        <div class="fighter"><span class="rank">18</span><span class="name">Ryan Garcia</span><span class="record">24-1</span></div>
+        <div class="fighter"><span class="rank">19</span><span class="name">Masayoshi Nakatani</span><span class="record">21-3</span></div>
+        <div class="fighter"><span class="rank">20</span><span class="name">Maxi Hughes</span><span class="record">27-7-2</span></div>
+        <div class="fighter"><span class="rank">21</span><span class="name">Richard Commey</span><span class="record">32-4</span></div>
+        <div class="fighter"><span class="rank">22</span><span class="name">Miguel Berchelt</span><span class="record">39-3</span></div>
+        <div class="fighter"><span class="rank">23</span><span class="name">Hector Garcia</span><span class="record">17-2</span></div>
+        <div class="fighter"><span class="rank">24</span><span class="name">Joe Cordina</span><span class="record">18-1</span></div>
+        <div class="fighter"><span class="rank">25</span><span class="name">Gary Antuanne Russell</span><span class="record">19-0</span></div>
+        <div class="fighter"><span class="rank">26</span><span class="name">Jojo Diaz</span><span class="record">34-4-1</span></div>
+        <div class="fighter"><span class="rank">27</span><span class="name">Arnold Barboza Jr</span><span class="record">30-0</span></div>
+        <div class="fighter"><span class="rank">28</span><span class="name">Tevin Farmer</span><span class="record">33-6-1</span></div>
+        <div class="fighter"><span class="rank">29</span><span class="name">Claudio Marrero</span><span class="record">28-5</span></div>
+        <div class="fighter"><span class="rank">30</span><span class="name">William Silva</span><span class="record">30-6</span></div>
+        <div class="fighter"><span class="rank">31</span><span class="name">Azinga Fuzile</span><span class="record">16-2</span></div>
+        <div class="fighter"><span class="rank">32</span><span class="name">Lamont Roach</span><span class="record">25-2-1</span></div>
+        <div class="fighter"><span class="rank">33</span><span class="name">Zhora Hamazaryan</span><span class="record">11-1-1</span></div>
+        <div class="fighter"><span class="rank">34</span><span class="name">Emmanuel Tagoe</span><span class="record">35-2</span></div>
+        <div class="fighter"><span class="rank">35</span><span class="name">Lewis Ritson</span><span class="record">24-3</span></div>
+        <div class="fighter"><span class="rank">36</span><span class="name">Jhack Tepora</span><span class="record">26-2</span></div>
+        <div class="fighter"><span class="rank">37</span><span class="name">Michael Dutchover</span><span class="record">18-2</span></div>
+        <div class="fighter"><span class="rank">38</span><span class="name">Jose Pedraza</span><span class="record">29-6</span></div>
+        <div class="fighter"><span class="rank">39</span><span class="name">Toka Kahn Clary</span><span class="record">32-3</span></div>
+        <div class="fighter"><span class="rank">40</span><span class="name">Otar Eranosyan</span><span class="record">13-1</span></div>
+        <div class="fighter"><span class="rank">41</span><span class="name">Raymond Ford</span><span class="record">16-1-1</span></div>
+        <div class="fighter"><span class="rank">42</span><span class="name">Robson Conceicao</span><span class="record">19-2-1</span></div>
+        <div class="fighter"><span class="rank">43</span><span class="name">Hank Lundy</span><span class="record">31-11-1</span></div>
+        <div class="fighter"><span class="rank">44</span><span class="name">Felix Verdejo</span><span class="record">27-2</span></div>
+        <div class="fighter"><span class="rank">45</span><span class="name">Edner Cherry</span><span class="record">40-9-2</span></div>
+        <div class="fighter"><span class="rank">46</span><span class="name">Pablo Cesar Cano</span><span class="record">34-9-1</span></div>
+        <div class="fighter"><span class="rank">47</span><span class="name">Omar Douglas</span><span class="record">24-6</span></div>
+        <div class="fighter"><span class="rank">48</span><span class="name">Robeisy Ramirez</span><span class="record">14-2</span></div>
+        <div class="fighter"><span class="rank">49</span><span class="name">Yves Ulysse Jr</span><span class="record">20-3</span></div>
+        <div class="fighter"><span class="rank">50</span><span class="name">Rances Barthelemy</span><span class="record">29-2-1</span></div>
+    </div>
+
+    <div id="feather" class="division">
+        <div class="division-title">Featherweight (126 lbs)</div>
+        <div class="fighter champion"><span class="rank">C</span><span class="name">Rafael Espinoza</span><span class="record">26-0</span></div>
+        <div class="fighter"><span class="rank">1</span><span class="name">Nick Ball</span><span class="record">21-0-1</span></div>
+        <div class="fighter"><span class="rank">2</span><span class="name">Bruce Carrington</span><span class="record">13-0</span></div>
+        <div class="fighter"><span class="rank">3</span><span class="name">Rey Vargas</span><span class="record">37-1-1</span></div>
+        <div class="fighter"><span class="rank">4</span><span class="name">Luis Alberto Lopez</span><span class="record">31-2</span></div>
+        <div class="fighter"><span class="rank">5</span><span class="name">Angelo Leo</span><span class="record">25-1</span></div>
+        <div class="fighter"><span class="rank">6</span><span class="name">Robeisy Ramirez</span><span class="record">14-2</span></div>
+        <div class="fighter"><span class="rank">7</span><span class="name">Raymond Ford</span><span class="record">16-1-1</span></div>
+        <div class="fighter"><span class="rank">8</span><span class="name">Naoya Inoue</span><span class="record">29-0</span></div>
+        <div class="fighter"><span class="rank">9</span><span class="name">Brandon Figueroa</span><span class="record">25-1-1</span></div>
+        <div class="fighter"><span class="rank">10</span><span class="name">Luis Melendez</span><span class="record">21-1</span></div>
+        <div class="fighter"><span class="rank">11</span><span class="name">Leigh Wood</span><span class="record">28-3</span></div>
+        <div class="fighter"><span class="rank">12</span><span class="name">Stephen Fulton</span><span class="record">22-1</span></div>
+        <div class="fighter"><span class="rank">13</span><span class="name">Mauricio Lara</span><span class="record">27-3-1</span></div>
+        <div class="fighter"><span class="rank">14</span><span class="name">Abraham Nova</span><span class="record">23-2</span></div>
+        <div class="fighter"><span class="rank">15</span><span class="name">Jordan Gill</span><span class="record">29-2-1</span></div>
+        <div class="fighter"><span class="rank">16</span><span class="name">Gary Russell Jr</span><span class="record">33-3</span></div>
+        <div class="fighter"><span class="rank">17</span><span class="name">Eduardo Ramirez</span><span class="record">29-3-3</span></div>
+        <div class="fighter"><span class="rank">18</span><span class="name">Kid Galahad</span><span class="record">30-3</span></div>
+        <div class="fighter"><span class="rank">19</span><span class="name">Reiya Abe</span><span class="record">30-4</span></div>
+        <div class="fighter"><span class="rank">20</span><span class="name">Otabek Kholmatov</span><span class="record">14-0</span></div>
+        <div class="fighter"><span class="rank">21</span><span class="name">Jessie Magdaleno</span><span class="record">29-2</span></div>
+        <div class="fighter"><span class="rank">22</span><span class="name">Joet Gonzalez</span><span class="record">27-3</span></div>
+        <div class="fighter"><span class="rank">23</span><span class="name">Miguel Marriaga</span><span class="record">31-6</span></div>
+        <div class="fighter"><span class="rank">24</span><span class="name">Tugstsogt Nyambayar</span><span class="record">13-3</span></div>
+        <div class="fighter"><span class="rank">25</span><span class="name">Mark Magsayo</span><span class="record">25-2</span></div>
+        <div class="fighter"><span class="rank">26</span><span class="name">Isaac Lowe</span><span class="record">25-3-3</span></div>
+        <div class="fighter"><span class="rank">27</span><span class="name">Marlon Tapales</span><span class="record">37-4</span></div>
+        <div class="fighter"><span class="rank">28</span><span class="name">Albert Batyrgaziev</span><span class="record">11-0</span></div>
+        <div class="fighter"><span class="rank">29</span><span class="name">Jono Carroll</span><span class="record">24-3-1</span></div>
+        <div class="fighter"><span class="rank">30</span><span class="name">Lamont Roach</span><span class="record">25-2-1</span></div>
+        <div class="fighter"><span class="rank">31</span><span class="name">Dat Nguyen</span><span class="record">10-0</span></div>
+        <div class="fighter"><span class="rank">32</span><span class="name">Ruben Villa</span><span class="record">21-2</span></div>
+        <div class="fighter"><span class="rank">33</span><span class="name">Azat Hovhannisyan</span><span class="record">22-4</span></div>
+        <div class="fighter"><span class="rank">34</span><span class="name">Joseph Diaz Jr</span><span class="record">34-4-1</span></div>
+        <div class="fighter"><span class="rank">35</span><span class="name">Michael Conlan</span><span class="record">19-2</span></div>
+        <div class="fighter"><span class="rank">36</span><span class="name">Claudio Marrero</span><span class="record">28-5</span></div>
+        <div class="fighter"><span class="rank">37</span><span class="name">Zelfa Barrett</span><span class="record">30-2</span></div>
+        <div class="fighter"><span class="rank">38</span><span class="name">Isaac Dogboe</span><span class="record">25-3</span></div>
+        <div class="fighter"><span class="rank">39</span><span class="name">Adam Lopez</span><span class="record">16-5</span></div>
+        <div class="fighter"><span class="rank">40</span><span class="name">Sam Goodman</span><span class="record">19-0</span></div>
+        <div class="fighter"><span class="rank">41</span><span class="name">Yerdos Sharipbek</span><span class="record">11-0</span></div>
+        <div class="fighter"><span class="rank">42</span><span class="name">Joe Cordina</span><span class="record">18-1</span></div>
+        <div class="fighter"><span class="rank">43</span><span class="name">Ronny Rios</span><span class="record">34-4</span></div>
+        <div class="fighter"><span class="rank">44</span><span class="name">Carlos Castro</span><span class="record">30-2</span></div>
+        <div class="fighter"><span class="rank">45</span><span class="name">Reece Bellotti</span><span class="record">18-5</span></div>
+        <div class="fighter"><span class="rank">46</span><span class="name">Genesis Servania</span><span class="record">37-4</span></div>
+        <div class="fighter"><span class="rank">47</span><span class="name">Zhankosh Turarov</span><span class="record">33-1</span></div>
+        <div class="fighter"><span class="rank">48</span><span class="name">Hugo Ruiz</span><span class="record">40-6</span></div>
+        <div class="fighter"><span class="rank">49</span><span class="name">Vincent Astrolabio</span><span class="record">19-4</span></div>
+        <div class="fighter"><span class="rank">50</span><span class="name">Alexis Santiago</span><span class="record">18-3-1</span></div>
+    </div>
+
+    <script>
+        function showDivision(divId) {
+            document.querySelectorAll('.division').forEach(d => d.classList.remove('active'));
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.getElementById(divId).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
